@@ -1,6 +1,7 @@
-
 import FadeUpElement from './FadeUpElement';
 import RevealText from './RevealText';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { User } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -8,10 +9,20 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <div className="mb-8">
+            <div className="mb-8 flex items-center gap-6">
               <RevealText>
                 <h2 className="text-3xl md:text-4xl font-display font-bold">About Me</h2>
               </RevealText>
+              <Avatar className="w-20 h-20">
+                <AvatarImage 
+                  src="/placeholder.svg" 
+                  alt="Profile Picture" 
+                  className="object-cover"
+                />
+                <AvatarFallback>
+                  <User className="w-12 h-12 text-muted-foreground" />
+                </AvatarFallback>
+              </Avatar>
             </div>
             
             <FadeUpElement delay={1}>
