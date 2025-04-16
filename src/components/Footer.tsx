@@ -1,5 +1,5 @@
 
-import { MessageSquare } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import FadeUpElement from './FadeUpElement';
 
 const Footer = () => {
@@ -27,10 +27,10 @@ const Footer = () => {
               
               <button 
                 onClick={handleWhatsAppClick}
-                className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
+                className="flex items-center gap-2 bg-primary/20 hover:bg-primary/30 px-4 py-2 rounded-full transition-colors"
               >
-                <MessageSquare size={16} />
-                <span className="hover-trigger">WhatsApp</span>
+                <MessageCircle size={20} className="text-primary" />
+                <span className="text-foreground">WhatsApp</span>
               </button>
             </div>
           </div>
