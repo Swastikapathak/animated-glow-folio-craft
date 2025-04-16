@@ -2,11 +2,14 @@
 import { ChevronDown } from 'lucide-react';
 import RevealText from './RevealText';
 import FadeUpElement from './FadeUpElement';
+import BackgroundAnimation from './BackgroundAnimation';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="h-screen flex flex-col justify-center items-center relative">
-      <div className="container mx-auto px-4 md:px-8">
+    <section id="hero" className="h-screen flex flex-col justify-center items-center relative overflow-hidden">
+      <BackgroundAnimation />
+      
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6 overflow-hidden">
             <RevealText>
@@ -33,7 +36,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
         <a href="#about" className="hover-trigger flex flex-col items-center">
           <span className="text-sm mb-2 opacity-70">Scroll Down</span>
           <ChevronDown className="animate-bounce h-6 w-6" />

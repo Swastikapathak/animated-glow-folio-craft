@@ -1,10 +1,16 @@
 
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageSquare } from 'lucide-react';
 import RevealText from './RevealText';
 import FadeUpElement from './FadeUpElement';
 import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
+  const whatsappNumber = "6201195893";
+  
+  const handleWhatsAppClick = () => {
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank');
+  };
+  
   return (
     <section id="contact" className="py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-8">
@@ -44,6 +50,10 @@ const ContactSection = () => {
                     <MapPin className="mr-4 text-primary" size={20} />
                     <span className="hover-trigger">New York, NY</span>
                   </li>
+                  <li className="flex items-center cursor-pointer hover:text-primary transition-colors" onClick={handleWhatsAppClick}>
+                    <MessageSquare className="mr-4 text-primary" size={20} />
+                    <span className="hover-trigger">WhatsApp: +62 0119 5893</span>
+                  </li>
                 </ul>
               </div>
             </FadeUpElement>
@@ -73,6 +83,18 @@ const ContactSection = () => {
                     </svg>
                   </a>
                 </div>
+              </div>
+            </FadeUpElement>
+            
+            <FadeUpElement delay={3}>
+              <div className="mt-8">
+                <Button 
+                  className="hover-trigger flex items-center gap-2"
+                  onClick={handleWhatsAppClick}
+                >
+                  <MessageSquare size={18} />
+                  Chat on WhatsApp
+                </Button>
               </div>
             </FadeUpElement>
           </div>
